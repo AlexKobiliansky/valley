@@ -1,3 +1,41 @@
 .s-intro
-  height: 100vh
-  background-color: green
+  height: 615px
+  background-color: #fff
+  background-size: 62% 100%
+  background-repeat: no-repeat
+  background-position: right center
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    width: 434px
+    height: 100%
+    background-image: url('../img/cloud-intro.png')
+    +bg-cover
+    top: 0
+    left: 32%
+  .container
+    position: relative
+    height: 100%
+    &:before
+      content: ''
+      position: absolute
+      height: 100%
+      width: 456px
+      background-image: url('../img/leaves.png')
+      +bg-cover
+      left: -450px
+      top: 0
+
+.intro-wrap
+  position: relative
+  z-index: 2
+  padding-top: 175px
+  h1
+    font-size: 46px
+    line-height: 1
+    display: inline-block
+    font-weight: 600
+    margin-bottom: 30px
+  p
+    font-size: 22px

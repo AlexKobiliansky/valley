@@ -3,6 +3,37 @@
 
 /*==========  Desktop First  ==========*/
 
+@media (max-width: 1700px)
+  .intro-wrap
+    padding-top: 200px
+
+  .s-intro
+    overflow: hidden
+    .container
+      &:before
+        left: -300px
+        height: calc(100% + 40px)
+        top: -40px
+
+@media (max-width: 1500px)
+  .s-intro
+    height: 500px
+
+@media (max-width: 1400px)
+  .s-intro
+    height: 450px
+    .container
+      &:before
+        left: -200px
+        top: 0
+    &:after
+      left: 30%
+
+  .intro-wrap
+    padding-top: 150px
+    h1
+      font-size: 40px
+
 // ≥1200px
 +media-breakpoint-down(lg)
   .line
@@ -17,8 +48,41 @@
       width: 50%
       margin-top: 20px
 
+  .s-intro
+    height: 400px
+
 // ≥992px
 +media-breakpoint-down(md)
+  .s-intro
+    background-size: cover
+    margin-top: 200px
+    overflow: visible
+    background-position: center center
+    &:after
+      width: 100%
+      left: 0
+      height: 200px
+      top: -100px
+      background-image: linear-gradient(to bottom,  #fff 50%,  rgba(#fff, 0) 100%)
+    .container
+      &:before
+        height: 300px
+        top: -200px
+        z-index: 3
+        background-size: 100%
+        background-position: center top
+        left: -270px
+
+  .intro-wrap
+    padding-top: 0
+    position: relative
+    top: -165px
+    padding-left: 200px
+    z-index: 4
+    h1
+      font-size: 32px
+    p
+      font-size: 16px
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -49,6 +113,29 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-intro
+    margin-top: 0
+    height: 300px
+    margin-bottom: 140px
+    .container
+      &:before
+        display: none
+    &:after
+      bottom: -100px
+      top: auto
+      background-image: linear-gradient(to top,  #fff 50%,  rgba(#fff, 0) 100%)
+
+
+  .intro-wrap
+    padding-left: 0
+    padding-top: 295px
+    width: 100%
+    top: auto
+    h1
+      font-size: 28px
+      margin-bottom: 20px
+
   .logo-wrap
     margin-left: auto
     margin-right: auto
@@ -68,6 +155,10 @@
     margin-top: 20px
 
 @media screen and (max-width: 390px)
+
+  .s-intro
+    background-position-x: -62px
+
   .logo-wrap
     flex-direction: column
     align-items: center
