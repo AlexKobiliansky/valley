@@ -1,3 +1,105 @@
 .s-houses
-  background-color: yellow
-  height: 200px
+
+
+.house-item
+  background-color: #fff
+  border-radius: 10px
+  padding: 23px
+  box-shadow: 0 0 40px 0 rgba(#000, .07)
+  display: flex
+  justify-content: space-between
+  margin-bottom: 25px
+  &>div
+    width: calc(50% - 10px)
+  &-title
+    font-weight: 600
+    font-size: 28px
+    margin-bottom: 15px
+    line-height: 1
+  &-desc
+    font-size: 18px
+    margin-bottom: 15px
+    p
+      margin-bottom: 0
+    strong
+      font-weight: 500
+      font-size: 19px
+  &-tarifs
+    display: inline-block
+    vertical-align: middle
+    width: 50%
+    margin-right: 15px
+  &-img
+    height: 215px
+    +bg-cover
+    border-radius: 5px
+  &-bottom
+    display: flex
+    align-items: center
+    .btn
+      height: auto
+
+.tarif-item
+  font-size: 19px
+  &-cost
+    display: inline-block
+    font-weight: 500
+    color: $acc-green
+  &-period
+    display: inline-block
+
+
+
+.house-slide
+  height: 380px
+  +bg-cover
+  border-radius: 5px
+
+.house-slider
+  position: relative
+  margin-bottom: 8px
+
+.house-next, .house-prev
+  height: 40px
+  width: 40px
+  +mt(.3s)
+  cursor: pointer
+  border-radius: 50%
+  border: 1px solid $acc-green
+  background-position: center center
+  background-repeat: no-repeat
+  position: absolute
+  z-index: 2
+  bottom: 10px
+
+
+.house-next
+  right: 10px
+  background-color: $acc-green
+  background-image: url('../img/icons/arrow-white.png')
+  //&:hover
+  //  background-color: #fff
+  //  background-image: url('../img/icons/arrow-green.png')
+
+
+.house-prev
+  right: 55px
+  transform: rotate(180deg)
+  background-color: #fff
+  background-image: url('../img/icons/arrow-green.png')
+  //&:hover
+  //  background-color: $acc-green
+  //  background-image: url('../img/icons/arrow-white.png')
+
+
+.house-slider-nav
+  display: flex
+  justify-content: space-between
+
+.house-nav
+  height: 120px
+  width: calc(33.333% - 5px)
+  +bg-cover
+  cursor: pointer
+
+

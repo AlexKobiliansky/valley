@@ -53,6 +53,20 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  section
+    padding-bottom: 40px
+
+  .section-title
+    font-size: 30px
+
+  .house-item
+    flex-direction: column
+    &>div
+      width: 100%
+    &-left
+      margin-bottom: 30px
+
   .s-intro
     background-size: cover
     margin-top: 200px
@@ -86,6 +100,20 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .section-title-wrap
+    &:before
+      width: 100px
+      bottom: -17px
+      left: calc(50% - 50px)
+      top: auto
+
+  .house-slide
+    height: 300px
+
+  .house-nav
+    height: 100px
+
   .logo-wrap
     font-size: 24px
     line-height: 20px
@@ -113,6 +141,34 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .section-title
+    font-size: 20px
+    line-height: 1
+
+  .house-slide
+    height: 240px
+
+  .house-nav
+    height: 75px
+
+  .house-item
+    &-title
+      font-size: 20px
+    &-desc
+      font-size: 16px
+    &-bottom
+      flex-direction: column
+      .btn
+        font-size: 16px
+    &-tarifs
+      width: 100%
+      text-align: center
+      margin-bottom: 15px
+
+
+  section
+    padding-top: 40px
 
   .s-intro
     margin-top: 0
