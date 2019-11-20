@@ -36,6 +36,14 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .advantages-img
+    display: none
+
+  .adv-item
+    &-title
+      font-size: 20px
+
   .line
     .container
       flex-wrap: wrap
@@ -53,6 +61,16 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .adv-wrap
+    justify-content: flex-start
+
+  .adv-item
+    width: calc(33.333% - 30px)
+    margin-bottom: 25px
+    margin-right: 30px
+    &:nth-child(3)
+      margin-right: 0
 
   section
     padding-bottom: 40px
@@ -101,6 +119,17 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .adv-item
+    &-img
+      width: 90px
+      height: 90px
+      padding: 22px
+      img
+        max-width: 100%
+        height: auto
+    &-title
+      font-size: 16px
+
   .section-title-wrap
     &:before
       width: 100px
@@ -142,6 +171,13 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .adv-wrap
+    justify-content: space-between
+
+  .adv-item
+    width: calc(50% - 10px)
+    margin-right: 0
+
   .section-title
     font-size: 20px
     line-height: 1
@@ -165,6 +201,9 @@
       width: 100%
       text-align: center
       margin-bottom: 15px
+
+  .tarif-item
+    font-size: 16px
 
 
   section
