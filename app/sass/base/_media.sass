@@ -37,6 +37,9 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .contacts-block
+    left: 65px
+
   .gallery-slider
     left: calc((100vw - 960px)/2 + 80px)
     width: calc(100% - ((100vw - 960px)/2) - 80px)
@@ -79,6 +82,17 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .contacts-block
+    position: relative
+    width: 100%
+    left: 0
+    top: 0
+    border-radius: 0
+
+  #map
+    height: 400px
+    background: 67%
 
   .gallery-slider
     left: calc((100vw - 720px)/2 + 80px)
@@ -208,6 +222,23 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  #map
+    background: 65.5%
+
+  .contacts-block
+    h3
+      font-size: 24px
+
+  .contacts-item
+    &-title
+      font-size: 14px
+    &-desc
+      font-size: 16px
+
+  #map
+    height: 300px
+
 
   .review-slide
     &-title
