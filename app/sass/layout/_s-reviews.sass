@@ -1,0 +1,58 @@
+.s-reviews
+  .btn-wrap
+    text-align: right
+
+.all-reviews
+  .svg
+    width: 20px
+    height: auto
+    position: relative
+    top: 2px
+    fill: $acc-green
+    margin-left: 6px
+    margin-right: 90px
+  &:hover
+    color: $acc-green
+    text-decoration: underline
+
+.reviews-slider
+  margin-left: 65px
+  margin-right: 65px
+  .house-prev, .house-next
+    width: 48px
+    height: 48px
+    bottom: calc(50% - 24px)
+  .house-prev
+    right: auto
+    left: -65px
+  .house-next
+    right: -65px
+  .slick-list
+    padding: 45px 0 25px 20px
+    box-sizing: initial
+
+.review-slide
+  margin-right: 25px
+  background-color: #fff
+  border-radius: 10px
+  position: relative
+  box-shadow: 0 0 15px 0 rgba(#aeaeae, .10)
+  padding: 100px 20px 55px
+  text-align: center
+  &-img
+    height: 130px
+    width: 130px
+    border-radius: 50%
+    overflow: hidden
+    +bg-cover
+    left: calc(50% - 65px)
+    top: -45px
+    position: absolute
+    border: 1px solid #dddedd
+  &-title
+    font-size: 26px
+    line-height: 1
+    font-weight: 500
+    margin-bottom: 12px
+  &-desc
+    font-size: 16px
