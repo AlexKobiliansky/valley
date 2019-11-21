@@ -1,0 +1,39 @@
+.s-events
+
+.events-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.event-item
+  width: calc(25% - 11px)
+  height: 190px
+  +bg-cover
+  border-radius: 8px
+  padding: 27px
+  margin-bottom: 20px
+  overflow: hidden
+  box-shadow: 0 0 30px 20px rgba(#aeaeae, .15)
+  &-title
+    font-size: 26px
+    font-weight: 500
+    margin-bottom: 20px
+    line-height: 1
+  .link
+    font-size: 18px
+    +mt(.3s)
+    color: $text
+    .svg
+      +mt(.3s)
+      width: 20px
+      height: auto
+      position: relative
+      margin-left: 6px
+      fill: $text
+      top: 2px
+    &:hover
+      color: $acc-green
+      .svg
+        fill: $acc-green
+
+
