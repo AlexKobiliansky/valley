@@ -27,6 +27,21 @@
 </head>
 
 <body>
+<!-- preloader -->
+<div class="preloader">
+	<div class="sk-cube-grid">
+		<div class="sk-cube sk-cube-1"></div>
+		<div class="sk-cube sk-cube-2"></div>
+		<div class="sk-cube sk-cube-3"></div>
+		<div class="sk-cube sk-cube-4"></div>
+		<div class="sk-cube sk-cube-5"></div>
+		<div class="sk-cube sk-cube-6"></div>
+		<div class="sk-cube sk-cube-7"></div>
+		<div class="sk-cube sk-cube-8"></div>
+		<div class="sk-cube sk-cube-9"></div>
+	</div>
+</div>
+<!-- preloader -->
 
 <!-- ======= HEADER START ======= -->
 <header>
@@ -179,7 +194,7 @@
 <section class="s-advantages">
 	<div class="container">
 		<img src="img/advantages-img.png" alt="alt" class="advantages-img">
-		<div class="section-title">У нас есть для комфортного отдыха:</div>
+		<h2 class="section-title">У нас есть для комфортного отдыха:</h2>
 		<div class="adv-wrap">
 			<!-- adv-item -->
 			<div class="adv-item">
@@ -427,9 +442,9 @@
 
 <!-- ======= SECTION GALLERY START ======= -->
 <section class="s-gallery">
-	<div class="section-title">
+	<h2 class="section-title">
 		Фотогалерея
-	</div>
+	</h2>
 	<div class="gallery-slider">
 		<!-- slide start -->
 		<div class="gallery-slide">
@@ -617,12 +632,42 @@
 			<a href="#0" class="btn line-item" target="_blank">Скачать договор</a>
 			<div class="line-contacts line-item">
 				<a href="tel:+79162119512" class="call">+7 (916) 211 95-12</a>
-				<a href="#0" class="recall">Заказать звонок</a>
+				<a href="#popup-form" class="recall">Заказать звонок</a>
 			</div>
 		</div>
 	</div>
 </footer>
 <!-- ======= FOOTER END ======= -->
+
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
+
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Зелёная Долина">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Зелёная Долина">
+		<!-- END Hidden Required Fields -->
+
+
+		<h3>Оставьте заявку</h3>
+		<p>И мы свяжемся с Вами в ближайшее время</p>
+
+		<div class="form-labels-wrap">
+			<label>
+				<input type="text" placeholder="Имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+					   data-validation-error-msg="* Укажите ваше имя">
+			</label>
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Номер телефона"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+					   data-validation-error-msg="* Укажите ваш телефон">
+			</label>
+		</div>
+		<button type="submit" class="btn btn-red btn-rounded">Отправить</button>
+	</form>
+</div>
 
 <!-- ======= HTML FOR PHOTOSWIPE ======= -->
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
@@ -662,7 +707,6 @@
 				<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
 				<!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-				<!-- element will get class pswp__preloader--active when preloader is running -->
 				<div class="pswp__preloader">
 					<div class="pswp__preloader__icn">
 						<div class="pswp__preloader__cut">

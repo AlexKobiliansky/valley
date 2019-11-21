@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
     $('img.svg').each(function(){
         var $img = jQuery(this);
         var imgID = $img.attr('id');
@@ -33,9 +32,6 @@ $(document).ready(function(){
         }, 'xml');
     });
 
-
-
-
     $('.house-slider').slick({
         infinite: true,
         fade: true,
@@ -64,9 +60,6 @@ $(document).ready(function(){
                     slidesToShow: 1,
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -94,9 +87,6 @@ $(document).ready(function(){
                     slidesToShow: 1,
                 }
             }
-            // You can unslick at a given breakpoint now by adding:
-            // settings: "unslick"
-            // instead of a settings object
         ]
     });
 
@@ -139,33 +129,63 @@ $(document).ready(function(){
 
     $('.gallery-slide').photoswipe();
 
-
-
-
-
-
     $('.house-nav').click(function() {
         $('.house-slider').slick('slickGoTo',$(this).index());
     });
 
+    $('.preloader').fadeOut();
+
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
+
+    /**
+     * FORMS
+     */
+    var uPhone = $('.user-phone');
+    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
+
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(4,4);
+        needelem.focus();
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
+
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
+        var t = th.find(".btn").text();
+        th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text(t);
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });
-
-
-
-
-
 
 
     /** YA-MAPS */
