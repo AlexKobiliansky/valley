@@ -57,6 +57,31 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="house-next"></button>',
     });
 
+    $('.gallery-slider').slick({
+        infinite: true,
+        arrows: true,
+        prevArrow: '<button type="button" class="house-prev"></button>',
+        nextArrow: '<button type="button" class="house-next"></button>',
+        slidesToShow: 4,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 390,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
     $('.add-slider').slick({
         infinite: true,
         arrows: true,
@@ -86,6 +111,8 @@ $(document).ready(function(){
             // instead of a settings object
         ]
     });
+
+    $('.gallery-slide').photoswipe();
 
 
 

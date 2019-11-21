@@ -37,6 +37,13 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .gallery-slider
+    left: calc((100vw - 960px)/2 + 80px)
+    width: calc(100% - ((100vw - 960px)/2) - 80px)
+    position: relative
+    .house-prev, .house-next
+      left: -80px
+
   .event-item
     padding: 20px 15px
     &-title
@@ -72,6 +79,11 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .gallery-slider
+    left: calc((100vw - 720px)/2 + 80px)
+    width: calc(100% - ((100vw - 720px)/2) - 80px)
+    position: relative
 
   .event-item
     width: calc(50% - 10px)
@@ -136,6 +148,12 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .gallery-slider
+    left: calc((100vw - 540px)/2)
+    width: calc(100% - ((100vw - 540px)/2))
+    .house-prev, .house-next
+      display: none!important
+
   .section-title
     line-height: 1.1
 
@@ -190,6 +208,15 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .gallery-slider
+    left: 10px
+    width: calc(100% - 10px)
+    .slick-list
+      padding-right: 50px
+
+  .gallery-slide
+    margin-right: 20px
 
   .event-item
     padding: 20px 15px
