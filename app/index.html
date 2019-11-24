@@ -58,7 +58,7 @@
 			<a href="#0" class="btn line-item" target="_blank">Скачать договор</a>
 			<div class="line-contacts line-item">
 				<a href="tel:+79162119512" class="call">+7 (916) 211 95-12</a>
-				<a href="#0" class="recall">Заказать звонок</a>
+				<a href="#popup-form" class="recall">Заказать звонок</a>
 			</div>
 		</div>
 	</div>
@@ -155,7 +155,7 @@
 						<!-- /tarif-item -->
 					</div>
 
-					<a href="#0" class="btn">Подробнее</a>
+					<a href="#popup-form" class="btn" data-theme="Дом 3 этажа">Подробнее</a>
 				</div>
 			</div>
 		</div>
@@ -181,7 +181,7 @@
 						<!-- /tarif-item -->
 					</div>
 
-					<a href="#0" class="btn">Подробнее</a>
+					<a href="#popup-form" class="btn" data-theme="Малый дом">Подробнее</a>
 				</div>
 			</div>
 		</div>
@@ -411,28 +411,28 @@
 			<!-- event-item -->
 			<div class="event-item" style="background-image: url('img/event-img-1.jpg');">
 				<div class="event-item-title">Комфортный отдых</div>
-				<a href="#0" class="link">Подробнее <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
+				<a href="#popup-form" class="link" data-theme="Комфортный отдых">Забронировать <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
 			</div>
 			<!-- /event-item -->
 
 			<!-- event-item -->
 			<div class="event-item" style="background-image: url('img/event-img-2.jpg');">
 				<div class="event-item-title">Свадьбы</div>
-				<a href="#0" class="link">Подробнее <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
+				<a href="#popup-form" class="link" data-theme="Свадьбы">Забронировать <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
 			</div>
 			<!-- /event-item -->
 
 			<!-- event-item -->
 			<div class="event-item" style="background-image: url('img/event-img-3.jpg');">
 				<div class="event-item-title">Корпоративы</div>
-				<a href="#0" class="link">Подробнее <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
+				<a href="#popup-form" class="link" data-theme="Корпоративы">Забронировать <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
 			</div>
 			<!-- /event-item -->
 
 			<!-- event-item -->
 			<div class="event-item" style="background-image: url('img/event-img-4.jpg');">
 				<div class="event-item-title">Юбилеи</div>
-				<a href="#0" class="link">Подробнее <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
+				<a href="#popup-form" class="link" data-theme="Юбилеи">Забронировать <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
 			</div>
 			<!-- /event-item -->
 		</div>
@@ -575,9 +575,9 @@
 			</div>
 			<!-- slide-end -->
 		</div>
-		<div class="btn-wrap">
-			<a href="#0" class="all-reviews">Все отзывы <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>
-		</div>
+<!--		<div class="btn-wrap">-->
+<!--			<a href="#0" class="all-reviews">Все отзывы <img src="img/icons/link-arrow.svg" alt="alt" class="svg"></a>-->
+<!--		</div>-->
 	</div>
 </section>
 <!-- ======= SECTION REVIEWS END ======= -->
@@ -648,6 +648,8 @@
 		<input type="hidden" name="form_subject" value="Заявка с сайта Зелёная Долина">
 		<!-- END Hidden Required Fields -->
 
+		<input type="hidden" name="Забронировать" value="" id="theme">
+
 
 		<h3>Оставьте заявку</h3>
 		<p>И мы свяжемся с Вами в ближайшее время</p>
@@ -663,6 +665,9 @@
 					   autocomplete="off" data-validation="custom"
 					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
 					   data-validation-error-msg="* Укажите ваш телефон">
+			</label>
+			<label class="label-checkbox" >
+				<input type="checkbox" required checked> <span>Нажимая кнопку, Вы соглашаетесь на обработку персональных данных</span>
 			</label>
 		</div>
 		<button type="submit" class="btn btn-red btn-rounded">Отправить</button>

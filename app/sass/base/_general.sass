@@ -127,12 +127,17 @@ form
   label
     display: block
     margin-bottom: 15px
+    &.label-checkbox
+      input
+        display: inline-block
+        width: auto
   input
     width: 100%
     padding: 12px 20px 14px
     line-height: 1
     font-size: 18px
     border-color: #aeaeae
+    border-radius: 3px
     &.error
       border-color: red!important
       color: red!important
@@ -250,4 +255,25 @@ form
   align-items: center
   background-color: #f8fcff
 //end PRELOADER
+
+.label-checkbox
+  text-align: left
+  line-height: 1
+  font-size: 13px
+  height: 13px
+  margin-top: 20px
+  cursor: pointer
+  .jq-checkbox
+    float: left
+    margin-right: 10px
+    border-color: #aeaeae
+  span
+    position: relative
+    top: -5px
+
+.jq-checkbox.checked .jq-checkbox__div
+  width: 9px
+  height: 5px
+  border-bottom-color: $acc-green
+  border-left-color: $acc-green
 

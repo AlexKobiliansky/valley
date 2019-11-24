@@ -135,6 +135,14 @@ $(document).ready(function(){
 
     $('.preloader').fadeOut();
 
+
+
+    $("a[href='#popup-form']").on('click', function(){
+       var theme = $(this).data('theme');
+
+       $('#theme').val(theme);
+    });
+
     $(function() {
         $("a[href='#popup-form']").magnificPopup({
             type: "inline",
@@ -175,7 +183,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
@@ -186,6 +194,8 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    $('input[type="checkbox"]').styler();
 
 
     /** YA-MAPS */
